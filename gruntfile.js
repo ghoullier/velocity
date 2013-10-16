@@ -28,11 +28,13 @@ module.exports = function(grunt) {
       // Fichiers à vérifier
       files: ['gruntfile.js', 'www/js/*.js'],
       // Surcharge les options par défaut
-      indent: 2,
-      globals: {
-        jQuery: true,
-        _: true,
-        Backbone: true
+      options: {
+        indent: 2,
+        globals: {
+          jQuery: true,
+          _: true,
+          Backbone: true
+        },
       },
       // Génération automatique d'un rapport XML
       reporter: 'jslint',
@@ -77,6 +79,26 @@ module.exports = function(grunt) {
           dest: 'www/img'
         }]
       }
+    },
+    watch: {
+      // Fichier à surveiller
+      files: ['gruntfile.js'],
+      // Tâche à éxécuter
+      tasks: ['cssint', 'cssmin', 'jshint', 'concat']
     }
   });
+  // Chargement des modules tiers
+  grunt.loadNpmTasks('grunt-contrib-csslint');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  // Tâche par défaut
+  grunt.registerTask('default', ['csslint', 'cssmin', 'jshint', 'concat', 'uglify', 'imagemin']);
+  // Tâche personalisée pour le développement
+  grunt.registerTask('dev', ['csslint', 'cssmin', 'jshint', 'concat', 'uglify', 'watch']);
+  // Tâche personalisée pour la mise en producion
+  grunt.registerTask('prod', ['imagemin']);
 };
