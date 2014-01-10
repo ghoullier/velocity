@@ -1,20 +1,25 @@
 {
-  "name": "Velocity",
+  "author": "ghoullier",
+  "name": "velocity",
+  "description": "",
   "version": "0.0.1",
-  "description": "Application mobile basé sur Open Data pour simplifier l'usage du service VeloSTAR",
+  "homepage": "",
   "repository": {
     "type": "git",
     "url": "https://github.com/ghoullier/velocity.git"
   },
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-csslint": "~0.1.2",
-    "grunt-contrib-cssmin": "~0.6.2",
-    "grunt-contrib-jshint": "~0.6.4",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-uglify": "~0.2.4",
-    "grunt-contrib-imagemin": "~0.3.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "bower": "~1.2.7"
-  }
+  "scripts": {
+    "start": "brunch watch --server",
+    "test": "brunch test"
+  },
+  "dependencies": {
+    "javascript-brunch": ">= 1.0 < 1.8",
+    "css-brunch": ">= 1.0 < 1.8",
+    "stylus-brunch": ">= 1.0 < 1.8",
+    "handlebars-brunch": ">= 1.0 < 1.8",
+    "uglify-js-brunch": ">= 1.0 < 1.8",
+    "clean-css-brunch": ">= 1.0 < 1.8",
+    "auto-reload-brunch": ">= 1.0 < 1.8"
+  },
+  "devDependencies": {}
 }

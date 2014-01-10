@@ -1,27 +1,22 @@
 {
-  "name": "velocity",
-  "version": "0.0.1",
-  "homepage": "https://github.com/ghoullier/velocity",
-  "authors": [
-    "Gregory HOULLIER <gregory.houllier@niji.fr>"
-  ],
-  "description": "Application mobile basé sur Open Data pour simplifier l'usage du service VeloSTAR",
-  "keywords": [
-    "Open",
-    "Data"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "name": "example-app",
+  "version": "0.1.0",
+  "main": "public/javascripts/app.js",
   "dependencies": {
-    "jquery": "~2.0.3",
-    "lodash": "~2.2.1",
-    "requirejs": "~2.1.9",
-    "backbone": "1.1.0"
+    "chaplin": "~0.12.0",
+    "console-polyfill": "~0.1.0",
+    "lodash": "~2.0.0",
+    "jquery": "~2.0.2",
+    "normalize-css": "~2.1.2",
+    "h5bp-helpers": "~0.1.0"
+  },
+  "overrides": {
+    "backbone": {
+      "dependencies": {
+        "lodash": "*",
+        "jquery": "*"
+      },
+      "main": "backbone.js"
+    }
   }
 }
