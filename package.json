@@ -2,8 +2,9 @@
   "author": "ghoullier",
   "name": "velocity",
   "description": "",
-  "version": "0.0.1",
-  "homepage": "",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://ghoullier.github.io/velocity/",
   "repository": {
     "type": "git",
     "url": "https://github.com/ghoullier/velocity.git"
@@ -20,8 +21,7 @@
     "handlebars-brunch": ">= 1.0 < 1.8",
     "uglify-js-brunch": ">= 1.0 < 1.8",
     "clean-css-brunch": ">= 1.0 < 1.8",
-    "auto-reload-brunch": ">= 1.0 < 1.8",
-    "appcache-brunch": "~1.7.1"
+    "auto-reload-brunch": ">= 1.0 < 1.8"
   },
   "devDependencies": {}
 }
