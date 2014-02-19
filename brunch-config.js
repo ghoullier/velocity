@@ -12,5 +12,11 @@ exports.config = {
     templates: {
       joinTo: 'javascripts/app.js'
     }
+  },
+  plugins: {
+    appcache: {
+      network: ['*'],
+      fallback: {}
+    }
   }
 };
