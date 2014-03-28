@@ -1,0 +1,8 @@
+{
+  "files": [
+    {
+      "from": "collection-view.js.hbs",
+      "to": "app/views/{{name}}-view.js"
+    }
+  ]
+}

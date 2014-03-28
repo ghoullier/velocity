@@ -1,0 +1,11 @@
+{
+  "files": [],
+  "dependencies": [
+    {"type": "model"},
+    {"type": "view"},
+    {"type": "route"},
+    {"type": "controller"},
+    {"type": "template"},
+    {"type": "style"}
+  ]
+}

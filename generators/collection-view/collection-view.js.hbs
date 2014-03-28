@@ -1,0 +1,6 @@
+var CollectionView = require('views/base/collection-view'),
+    {{#camelize}}{{name}}{{/camelize}} = require('views/{{name}}-view');
+
+module.exports = CollectionView.extend({
+  itemView: {{#camelize}}{{name}}{{/camelize}}
+});
