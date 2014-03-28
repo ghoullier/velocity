@@ -1,13 +1,14 @@
 {
-  "author": "Your Name",
-  "name": "example-app",
-  "description": "Package description",
+  "author": "Grégory Houllier",
+  "name": "velovity",
+  "description": "",
   "version": "0.0.1",
-  "homepage": "",
+  "homepage": "http://ghoullier.github.io/velocity/",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/ghoullier/brunch-with-chaplin-exoskeleton.git"
   },
+  "private": true,
   "scripts": {
     "start": "brunch watch --server"
   },
