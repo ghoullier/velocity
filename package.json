@@ -11,8 +11,7 @@
   },
   "scripts": {
     "postinstall": "bower install",
-    "start": "brunch watch --server",
-    "test": "brunch test"
+    "start": "brunch watch --server"
   },
   "dependencies": {
     "javascript-brunch": ">= 1.0 < 1.8",
