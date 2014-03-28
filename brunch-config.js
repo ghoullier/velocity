@@ -14,6 +14,9 @@ exports.config = {
     }
   },
   plugins: {
+    jshint: {
+      pattern: /^app\/.*\.js$/
+    },
     appcache: {
       network: ['*'],
       fallback: {}
