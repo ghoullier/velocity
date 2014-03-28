@@ -5,4 +5,4 @@ module.exports = Application = Chaplin.Application.extend({
   //   // (by calling `super`) after that.
   //   this.constructor.__super__.start.call(this);
   // }
-})
+});
