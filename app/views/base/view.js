@@ -1,4 +1,4 @@
-require('utils/view-helper');
+require('core/view-helper');
 
 module.exports = Chaplin.View.extend({
   autoRender: true,

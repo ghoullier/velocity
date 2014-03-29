@@ -2,7 +2,9 @@
 // ------------------------------
 
 // Delegate to Chaplin’s utils module.
-var utils = Chaplin.utils.beget(Chaplin.utils);
+var extend = Exoskeleton.utils.extend,
+    mixed = extend({}, Chaplin.utils, Exoskeleton.utils),
+    utils = Chaplin.utils.beget(mixed);
 
 // _.extend(utils, {
 //   someMethod: function() {}
