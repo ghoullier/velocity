@@ -5,7 +5,8 @@ module.exports = View.extend({
   id: 'site-container',
   regions: {
     header: '#header-container',
-    main: '#page-container'
+    main: '#main-container',
+    footer: '#footer-container'
   },
   template: require('./templates/site')
 });

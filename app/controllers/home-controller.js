@@ -1,6 +1,6 @@
-var Controller = require('controllers/base/controller');
-var HeaderView = require('views/home/header-view');
-var HomePageView = require('views/home/home-page-view');
+var Controller = require('controllers/base/controller'),
+    HeaderView = require('views/home/header-view'),
+    HomePageView = require('views/home/home-page-view');
 
 module.exports = Controller.extend({
   beforeAction: function() {
@@ -11,4 +11,5 @@ module.exports = Controller.extend({
   index: function() {
     this.view = new HomePageView({region: 'main'});
   }
+
 });
