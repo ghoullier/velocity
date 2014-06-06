@@ -13,3 +13,4 @@ module.exports = Controller.extend({
     this.view = new BikesDetailView({region: 'main'});
   }
 });
+//TODO: http://stackoverflow.com/questions/13465645/how-to-use-backbone-js-but-in-the-no-restful-way
