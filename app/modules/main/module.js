@@ -1,2 +1,1 @@
-console.log('modules/main/module.js');
-var poke = angular.module('velocity.main', []);
+var module = ng.module('velocity.main', []);

@@ -1,4 +1,3 @@
-console.log('initialize.js');
-angular.bootstrap(document, [
+ng.bootstrap(document, [
   'velocity.main'
 ]);

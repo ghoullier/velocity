@@ -13,6 +13,7 @@
     "start": "brunch watch --server"
   },
   "dependencies": {
+    "angular-partials-brunch": "~0.0.1",
     "javascript-brunch": ">= 1.0 < 1.8",
     "css-brunch": ">= 1.0 < 1.8",
     "uglify-js-brunch": ">= 1.0 < 1.8",

@@ -7,7 +7,23 @@
     <link rel="stylesheet" href="./stylesheets/app.css">
   </head>
   <body>
-    <main></main>
+    <header ng-controller="HeaderCtrl as header">
+      <span>{{headerInfo.test}}</span>
+      <velocity-hour title="titre" on-poke="header.poke()"</velocity-hour>
+    </header>
+    <main>
+      <velocity-tabs>
+        <velocity-pane title="Hello">
+          <h4>Hello</h4>
+          <p>Lorem ipsum dolor sit amet</p>
+        </velocity-pane>
+        <velocity-pane title="World">
+          <h4>World</h4>
+          <em>Mauris elementum elementum enim at suscipit.</em>
+          <p><a href ng-click="i = i + 1">counter: {{i || 0}}</a></p>
+        </velocity-pane>
+      </velocity-tabs>
+    </main>
     <script src="./javascripts/vendor.js"></script>
     <script src="./javascripts/app.js"></script>
   </body>

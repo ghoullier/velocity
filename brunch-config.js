@@ -2,6 +2,9 @@ exports.config = {
   plugins: {
     jshint: {
       pattern: /^app\/.*\.js$/
+    },
+    "angular-partials": {
+      poke: true
     }
   },
   files: {
@@ -21,14 +24,12 @@ exports.config = {
     },
     stylesheets: {
       joinTo: 'stylesheets/app.css'
-    },
-    templates: {
-      joinTo: 'javascripts/app.js'
     }
   },
   modules: {
     definition: false,
     wrapper: function (path, data) {
+      console.log('wrapper', path);
       return ";(function (root, ng) {\n" + data  + "\n}(this, this.angular))\n";
     }
   }
