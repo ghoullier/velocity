@@ -12,5 +12,5 @@ function MainController($scope, $log, trace) {
   this.increment = increment;
 }
 
-ng.module('velocity.common');
+ng.module('velocity.common')
   .controller('MainController', MainController);
