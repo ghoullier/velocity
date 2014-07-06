@@ -1,5 +1,5 @@
-HourDirective.$inject = ['$log'];
-function HourDirective($log) {
+HourDirective.$inject = ['$log', 'trace'];
+function HourDirective($log, trace) {
   return {
     restrict: 'E',
     scope: {
@@ -8,8 +8,8 @@ function HourDirective($log) {
     },
     controller: HourController,
     controllerAs: 'ctrl',
-    link: function (scope, element, attr) {
-      console.log('velocityHour', scope);
+    link: function link(scope, element, attr) {
+      trace(arguments);
       scope.hour = '10h';
     },
     templateUrl: 'modules/common/directives/templates/hour.html'
@@ -23,7 +23,7 @@ function HourController($scope, trace) {
   $scope.test = 'me';
 
   this.foo = function foo() {
-    $log.log('velocityHour::controller::foo');
+    trace(arguments);
   };
 }
 
