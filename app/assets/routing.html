@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Velocity application</title>
+    <link rel="stylesheet" href="./stylesheets/app.css">
+  </head>
+  <body>
+    <main>
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+          <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a ui-sref="home">Home</a></li>
+          <li><a ui-sref="poke">Poke</a></li>
+        </ul>
+      </nav>
+      <div class="container">
+        <div ui-view></div>
+      </div>
+    </main>
+    <script src="./javascripts/vendor.js"></script>
+    <script src="./javascripts/app.js"></script>
+  </body>
+</html>
