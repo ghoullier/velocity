@@ -1,11 +1,5 @@
-ng.module('velocity.common')
-  .directive('velocityPane', [velocityPaneDirective]);
-
-/**
- * Velocity Pane Directive
- * @return {ngDirective}
- */
-function velocityPaneDirective() {
+PaneDirective.$inject = ['$log'];
+function PaneDirective($log) {
   return {
     require: '^velocityTabs',
     restrict: 'E',
@@ -19,3 +13,6 @@ function velocityPaneDirective() {
     templateUrl: 'modules/common/directives/templates/pane.html'
   };
 }
+
+ng.module('velocity.common')
+  .directive('velocityPane', PaneDirective);

@@ -1,5 +1,5 @@
-var module = ng.module('velocity.common');
-module.controller('MainCtrl', ['$scope', '$log', 'trace', function($scope, $log, trace) {
+MainController.$inject = ['$scope', '$log', 'trace'];
+function MainController($scope, $log, trace) {
   $log.log('MainCtrl', arguments);
 
   $scope.count = 0;
@@ -10,4 +10,7 @@ module.controller('MainCtrl', ['$scope', '$log', 'trace', function($scope, $log,
     ++$scope.count;
   }
   this.increment = increment;
-}]);
+}
+
+ng.module('velocity.common');
+  .controller('MainController', MainController);

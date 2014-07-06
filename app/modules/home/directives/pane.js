@@ -1,11 +1,5 @@
-ng.module('velocity.home')
-  .directive('velocityHomePane', [velocityHomePaneDirective]);
-
-/**
- * Velocity Home Pane Directive
- * @return {ngDirective}
- */
-function velocityHomePaneDirective() {
+HomePaneDirective.$inject = ['$log'];
+function HomePaneDirective($log) {
   return {
     require: '^velocityTabs',
     restrict: 'E',
@@ -18,3 +12,6 @@ function velocityHomePaneDirective() {
     templateUrl: 'modules/home/directives/templates/pane.html'
   };
 }
+
+ng.module('velocity.home')
+  .directive('velocityHomePane', HomePaneDirective);

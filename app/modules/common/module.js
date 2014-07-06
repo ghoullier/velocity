@@ -1,1 +1,1 @@
-var module = ng.module('velocity.common', []);
+ng.module('velocity.common', []);

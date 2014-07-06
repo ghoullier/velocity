@@ -1,5 +1,5 @@
-var module = ng.module('velocity.common');
-module.controller('HeaderCtrl', ['$scope', '$log', 'trace', function($scope, $log, trace) {
+HeaderController.$inject = ['$scope', '$log', 'trace'];
+function HeaderController($scope, $log, trace) {
   $log.log('HeaderCtrl', arguments);
 
   $scope.headerInfo = {
@@ -9,4 +9,7 @@ module.controller('HeaderCtrl', ['$scope', '$log', 'trace', function($scope, $lo
   this.poke = function poke() {
     $log.log('HeaderCtrl::poke');
   };
-}]);
+}
+
+ng.module('velocity.common')
+  .controller('HeaderController', HeaderController);
