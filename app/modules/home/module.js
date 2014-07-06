@@ -1,19 +1,5 @@
-ng.module('velocity.home', ['ui.router'])
-  .config([
-    '$stateProvider',
-    '$urlRouterProvider',
-    'routing',
-    velocityHomeModuleConfig
-  ]);
-
-/**
- * Configure Home Module
- * @param  {Object} $stateProvider
- * @param  {Oject} $urlRouterProvider
- * @param  {Array} routing
- * @return {void}
- */
-function velocityHomeModuleConfig($stateProvider, $urlRouterProvider, routing) {
+HomeModuleConfig.$inject = ['$stateProvider', '$urlRouterProvider', 'routing'];
+function HomeModuleConfig($stateProvider, $urlRouterProvider, routing) {
   console.log(arguments.callee.name, arguments);
   // Default route
   $urlRouterProvider.otherwise('/home');
@@ -22,3 +8,6 @@ function velocityHomeModuleConfig($stateProvider, $urlRouterProvider, routing) {
     $stateProvider.state(route);
   });
 }
+
+ng.module('velocity.home', ['ui.router'])
+  .config(HomeModuleConfig);
