@@ -1,0 +1,25 @@
+<!--
+$$hashKey: 16
+address: "304 RUE DE FOUGÈRES"
+bikesavailable: "6"
+district: "Maurepas - Patton"
+lastupdate: "2014-07-06T21:19:02+02:00"
+latitude: "48.13213"
+longitude: "-1.635198"
+name: "ZAC SAINT SULPICE"
+number: "75"
+pos: "0"
+slotsavailable: "24"
+state: "1"
+-->
+<div class="tab-pane" ng-show="selected">
+  <h4>Stations</h4>
+  <ul>
+    <li ng-repeat="station in stations">
+      <span>{{station.district}}</span>
+      <span>{{station.name}}</span>
+      <span>{{station.bikesavailable}}</span>
+      <span>{{station.slotsavailable}}</span>
+    </li>
+  </ul>
+</div>
