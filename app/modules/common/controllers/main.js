@@ -1,4 +1,4 @@
-var module = ng.module('velocity.main');
+var module = ng.module('velocity.common');
 module.controller('MainCtrl', ['$scope', '$log', 'trace', function($scope, $log, trace) {
   $log.log('MainCtrl', arguments);
 

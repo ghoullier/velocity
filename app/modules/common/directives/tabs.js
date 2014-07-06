@@ -1,4 +1,4 @@
-var module = ng.module('velocity.main');
+var module = ng.module('velocity.common');
 module
   .directive('velocityTabs', function() {
     return {
@@ -22,6 +22,6 @@ module
           panes.push(pane);
         };
       }],
-      templateUrl: 'modules/main/directives/templates/tabs.html'
+      templateUrl: 'modules/common/directives/templates/tabs.html'
     };
   });

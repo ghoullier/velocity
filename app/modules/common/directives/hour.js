@@ -1,4 +1,4 @@
-var module = ng.module('velocity.main');
+var module = ng.module('velocity.common');
 module
   .directive('velocityHour', ['$log', function($log) {
     return {
@@ -19,6 +19,6 @@ module
         console.log('velocityHour', scope);
         scope.hour = '10h';
       },
-      templateUrl: 'modules/main/directives/templates/hour.html'
+      templateUrl: 'modules/common/directives/templates/hour.html'
     };
   }]);

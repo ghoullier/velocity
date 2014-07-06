@@ -1,3 +1,3 @@
 ng.bootstrap(document, [
-  'velocity.main'
+  'velocity.common'
 ]);
