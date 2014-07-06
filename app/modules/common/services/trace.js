@@ -7,4 +7,4 @@ function TraceService($log) {
 }
 
 ng.module('velocity.common')
-  .service('trace', TraceService);
+  .factory('trace', TraceService);
