@@ -9,6 +9,7 @@ module
       },
       controller: ['$scope', function($scope) {
         $scope.test = 'me';
+
         this.foo = function foo() {
           $log.log('velocityHour::controller::foo');
         };
