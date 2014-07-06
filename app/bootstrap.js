@@ -1,3 +1,4 @@
 ng.bootstrap(document, [
-  'velocity.common'
+  'velocity.common',
+  'velocity.home'
 ]);

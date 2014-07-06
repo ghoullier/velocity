@@ -1,27 +1,33 @@
-var module = ng.module('velocity.common');
-module
-  .directive('velocityTabs', function() {
-    return {
-      restrict: 'E',
-      transclude: true,
-      scope: {},
-      controller: ['$scope', function($scope) {
-        var panes = $scope.panes = [];
+ng.module('velocity.common')
+  .directive('velocityTabs', [velocityTabsDirective]);
 
-        $scope.select = function(pane) {
-          angular.forEach(panes, function(pane) {
-            pane.selected = false;
-          });
-          pane.selected = true;
-        };
+/**
+ * Velocity Tabs Directive
+ * @return {[type]}
+ */
+function velocityTabsDirective() {
+  return {
+    restrict: 'E',
+    transclude: true,
+    scope: {},
+    controller: ['$scope', function($scope) {
+      var panes = $scope.panes = [];
 
-        this.addPane = function(pane) {
-          if (panes.length === 0) {
-            $scope.select(pane);
-          }
-          panes.push(pane);
-        };
-      }],
-      templateUrl: 'modules/common/directives/templates/tabs.html'
-    };
-  });
+      this.select = function select(pane) {
+        angular.forEach(panes, function(pane) {
+          pane.selected = false;
+        });
+        pane.selected = true;
+      };
+
+      this.addPane = function addPane(pane) {
+        if (0 === panes.length) {
+          this.select(pane);
+        }
+        panes.push(pane);
+      };
+    }],
+    controllerAs: 'ctrl',
+    templateUrl: 'modules/common/directives/templates/tabs.html'
+  };
+}
