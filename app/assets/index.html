@@ -19,7 +19,9 @@
           <em>Mauris elementum elementum enim at suscipit.</em>
           <p><a href ng-click="i = i + 1">counter: {{i || 0}}</a></p>
         </velocity-pane>
-        <velocity-bike-stations title="Stations de vélo"></velocity-bike-stations>
+        <velocity-pane title="Stations de vélo">
+          <velocity-bike-stations></velocity-bike-stations>
+        </velocity-pane>
       </velocity-tabs>
     </main>
     <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>

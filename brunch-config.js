@@ -1,7 +1,10 @@
 exports.config = {
   plugins: {
     jshint: {
-      pattern: /^app\/.*\.js$/
+      pattern: /^app\/.*\.js$/,
+      options: {
+        sub: true
+      }
     },
     "angular-partials": {
       poke: true

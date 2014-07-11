@@ -5,7 +5,7 @@ ng.module('velocity.home')
     templateUrl: 'modules/home/partials/home.html',
     controller: 'HomeController as home'
   }, {
-    name: 'iwowu',
-    url: '/iwowu',
-    templateUrl: 'modules/home/partials/iwowu.html'
+    name: 'bike-stations',
+    url: '/bike-stations',
+    templateUrl: 'modules/home/partials/bike-stations.html'
   }]);
