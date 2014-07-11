@@ -9,5 +9,5 @@ function HomeModuleConfig($stateProvider, $urlRouterProvider, routing) {
   });
 }
 
-ng.module('velocity.home', ['ui.router'])
+ng.module('velocity.home', ['ui.router', 'ngGrid', 'google-maps'])
   .config(HomeModuleConfig);

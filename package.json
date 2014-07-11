@@ -14,12 +14,12 @@
   },
   "dependencies": {
     "angular-partials-brunch": "~0.0.1",
-    "javascript-brunch": ">= 1.0 < 1.8",
-    "css-brunch": ">= 1.0 < 1.8",
-    "uglify-js-brunch": ">= 1.0 < 1.8",
-    "clean-css-brunch": ">= 1.0 < 1.8",
-    "auto-reload-brunch": ">= 1.0 < 1.8",
-    "jshint-brunch": "~1.7.0",
-    "sass-brunch": "~1.8.1"
+    "javascript-brunch":       ">= 1.0 < 1.8",
+    "css-brunch":              ">= 1.0 < 1.8",
+    "uglify-js-brunch":        ">= 1.0 < 1.8",
+    "clean-css-brunch":        ">= 1.0 < 1.8",
+    "auto-reload-brunch":      ">= 1.0 < 1.8",
+    "jshint-brunch":           "~1.7.0",
+    "sass-brunch":             "~1.8.1"
   }
 }

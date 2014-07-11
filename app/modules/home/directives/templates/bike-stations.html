@@ -14,6 +14,14 @@ state: "1"
 -->
 <div class="tab-pane" ng-show="selected">
   <h4>Stations</h4>
+  <div class="velocity-bike-stations-grid" ng-grid="gridOptions"></div>
+  <google-map center="mapCenter" zoom="mapZoom" draggable="true">
+    <marker ng-repeat="item in selectedItems" coords="item"></marker>
+  </google-map>
+<!--
+  <div>{{selectedItems}}</div>
+  <div>{{mapZoom}}</div>
+  <div>{{mapCenter}}</div>
   <ul>
     <li ng-repeat="station in stations">
       <span>{{station.district}}</span>
@@ -22,4 +30,5 @@ state: "1"
       <span>{{station.slotsavailable}}</span>
     </li>
   </ul>
+-->
 </div>
