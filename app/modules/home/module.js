@@ -1,4 +1,4 @@
-HomeModuleConfig.$inject = ['$stateProvider', '$urlRouterProvider', 'routing'];
+HomeModuleConfig['$inject'] = ['$stateProvider', '$urlRouterProvider', 'routing'];
 function HomeModuleConfig($stateProvider, $urlRouterProvider, routing) {
   console.log(arguments.callee.name, arguments);
   // Default route

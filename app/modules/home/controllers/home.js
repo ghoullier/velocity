@@ -1,4 +1,4 @@
-HomeController.$inject = ['$scope', '$log', 'trace'];
+HomeController['$inject'] = ['$scope', '$log', 'trace'];
 function HomeController($scope, $log, trace) {
   trace(arguments);
   $scope.debug = 'debug';

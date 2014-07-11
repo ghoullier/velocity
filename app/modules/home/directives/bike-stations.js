@@ -1,4 +1,4 @@
-BikeStationsDirective.$inject = ['$log'];
+BikeStationsDirective['$inject'] = ['$log'];
 function BikeStationsDirective($log) {
   return {
     restrict: 'E',
@@ -12,7 +12,7 @@ function BikeStationsDirective($log) {
   };
 }
 
-BikeStationsController.$inject = ['$scope', 'BikesStationsViewData', 'trace'];
+BikeStationsController['$inject'] = ['$scope', 'BikesStationsViewData', 'trace'];
 function BikeStationsController($scope, BikesStationsViewData, trace) {
   BikesStationsViewData.getBikeStations().then(function onGetBikeStations(stations) {
     trace(arguments);

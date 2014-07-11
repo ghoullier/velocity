@@ -1,4 +1,4 @@
-HomePaneDirective.$inject = ['$log'];
+HomePaneDirective['$inject'] = ['$log'];
 function HomePaneDirective($log) {
   return {
     require: '^velocityTabs',
