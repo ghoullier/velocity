@@ -12,17 +12,21 @@ function BikeStationsDirective($log) {
   };
 }
 
-BikeStationsController['$inject'] = ['$scope', 'BikesStationsViewData', 'trace'];
-function BikeStationsController($scope, BikesStationsViewData, trace) {
+BikeStationsController['$inject'] = ['$scope', 'BikesStationsViewData', 'Geoposition', 'trace'];
+function BikeStationsController($scope, BikesStationsViewData, Geoposition, trace) {
   BikesStationsViewData.getBikeStations().then(function onGetBikeStations(stations) {
     trace(arguments);
     $scope.stations = stations;
   });
+  Geoposition.getCurrent().then(function onGetCurrentPosition(position) {
+    trace(arguments);
+    $scope.mapCenter = position.coords;
+  });
   $scope.selectedItems = [];
   $scope.mapZoom = 12;
   $scope.mapCenter = {
-    "latitude":48.11231522486975,
-    "longitude":-1.6686243808593515
+    latitude: null,
+    longitude: null
   };
   $scope.gridOptions = {
     data: 'stations',
