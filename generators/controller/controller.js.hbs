@@ -1,8 +1,0 @@
-var Controller = require('controllers/base/controller'),
-    {{#camelize}}{{name}}{{/camelize}}PageView = require('views/{{name}}/{{name}}-page-view');
-
-module.exports = Controller.extend({
-  index: function() {
-    this.view = new {{#camelize}}{{name}}{{/camelize}}PageView({region: 'main'});
-  }
-});

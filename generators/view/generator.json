@@ -1,8 +1,0 @@
-{
-  "files": [
-    {
-      "from": "view.js.hbs",
-      "to": "app/views/{{name}}/{{name}}-page-view.js"
-    }
-  ]
-}

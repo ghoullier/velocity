@@ -1,6 +1,0 @@
-var Collection = require('models/base/collection'),
-    {{#camelize}}{{name}}{{/camelize}} = require('./{{name}}');
-
-module.exports = Collection.extend({
-  model: {{#camelize}}{{name}}{{/camelize}}
-})
