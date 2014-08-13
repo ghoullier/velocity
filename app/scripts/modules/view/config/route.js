@@ -13,6 +13,10 @@ function UiRouteConfig($routeProvider, $locationProvider) {
       templateUrl: 'views/bike-stations.html',
       controller: 'BikeStationsController as ctrl'
     })
+   .when('/bike-stations/:id', {
+      templateUrl: 'views/bike-station-detail.html',
+      controller: 'BikeStationDetailController as ctrl'
+    })
     .otherwise({
       redirectTo: '/welcome'
     }) ;

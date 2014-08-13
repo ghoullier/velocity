@@ -15,8 +15,7 @@ function BikeStationsViewDataService($q, BikeStationsData) {
           id: station.number,
           latitude: station.latitude,
           longitude: station.longitude,
-          showWindow: true,
-          title: station.name,
+          name: station.name,
           slotsavailable: station.slotsavailable,
           bikesavailable: station.bikesavailable,
           district: station.district
@@ -31,6 +30,22 @@ function BikeStationsViewDataService($q, BikeStationsData) {
 
     return deferred.promise;
   };
+
+  this.getBikeStationById = function getBikeStationById(id) {
+    var deferred = $q.defer();
+
+    function onGetAllBikesStations(stations) {
+      stations.forEach(function (station) {
+        if (id === station.id) {
+          deferred.resolve(station);
+        }
+      });
+    }
+
+    this.getBikeStations().then(onGetAllBikesStations, deferred.reject);
+
+    return deferred.promise;
+  }
 }
 
 module.exports = BikeStationsViewDataService;
