@@ -2,7 +2,7 @@
 
 var NavigationController = require('./controller/navigation');
 var WelcomeController = require('./controller/welcome');
-var BikesController = require('./controller/bikes');
+var BikeStationsController = require('./controller/bike-stations');
 var UiRouteConfig = require('./config/route');
 
 module.exports = angular
@@ -10,4 +10,4 @@ module.exports = angular
   .config(UiRouteConfig)
   .controller('NavigationController', NavigationController)
   .controller('WelcomeController', WelcomeController)
-  .controller('BikesController', BikesController);
+  .controller('BikeStationsController', BikeStationsController);

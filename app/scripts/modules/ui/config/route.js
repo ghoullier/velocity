@@ -9,9 +9,9 @@ function UiRouteConfig($routeProvider, $locationProvider) {
       templateUrl: 'views/welcome.html',
       controller: 'WelcomeController as ctrl'
     })
-   .when('/bikes', {
-      templateUrl: 'views/bikes.html',
-      controller: 'BikesController as ctrl'
+   .when('/bike-stations', {
+      templateUrl: 'views/bike-stations.html',
+      controller: 'BikeStationsController as ctrl'
     })
     .otherwise({
       redirectTo: '/welcome'
