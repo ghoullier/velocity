@@ -6,7 +6,7 @@ module.exports = function(){
   // https://github.com/rowoot/gulp-gh-pages/issues/26
   return gulp.src([paths.dist.root + '**/*.*'])
     .pipe(ghPages({
-      remoteUrl : 'https://github.com/ghoullier/angular-boilerplate.git',
+      remoteUrl : 'https://github.com/ghoullier/velocity.git',
       branch : 'gh-pages',
       cacheDir : __dirname + '/../.publish/'
     }))
