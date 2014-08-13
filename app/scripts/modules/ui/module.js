@@ -5,5 +5,5 @@ var WelcomeController = require('./controller/welcome');
 console.log('WelcomeController', WelcomeController);
 
 module.exports = angular
-  .module('demo.ui', [])
+  .module('velocity.ui', ['ngRoute', 'ngTouch'])
   .controller('WelcomeController', WelcomeController);

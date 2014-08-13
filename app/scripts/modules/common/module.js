@@ -3,5 +3,5 @@
 var TracerFactory = require('./factory/tracer');
 
 module.exports = angular
-  .module('demo.common', [])
+  .module('velocity.common', [])
   .factory('Tracer', TracerFactory);
