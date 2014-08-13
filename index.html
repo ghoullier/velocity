@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <main role="content" ng-controller="WelcomeController as welcome">
-      <h1>My awesome app</h1>
-      <p>{{testVar}}</p>
-    </main>
+    <nav role="navigation" ng-controller="NavigationController as navigation">
+      <ul>
+        <li>
+          <a ng-href="/welcome">Accueil</a>
+        </li>
+      </ul>
+    </nav>
+    <main role="content" ng-view></main>
     <script src="js/bundle.js"></script>
   </body>
 </html>
