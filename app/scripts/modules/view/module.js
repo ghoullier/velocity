@@ -6,7 +6,7 @@ var BikeStationsController = require('./controller/bike-stations');
 var UiRouteConfig = require('./config/route');
 
 module.exports = angular
-  .module('velocity.ui', ['ngRoute', 'ngTouch'])
+  .module('velocity.view', ['ngRoute', 'ngTouch'])
   .config(UiRouteConfig)
   .controller('NavigationController', NavigationController)
   .controller('WelcomeController', WelcomeController)
