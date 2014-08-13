@@ -16,7 +16,8 @@
   "undef": true,
   "unused": true,
   "predef": [
-    "angular"
+    "angular",
+    "google"
   ],
   "strict": true,
   "trailing": true,

@@ -1,5 +1,9 @@
 'use strict';
 
+function toInt(value) {
+  return parseInt(value, 10);
+}
+
 /**
  * @ngInject
  */
@@ -16,8 +20,9 @@ function BikeStationsViewDataService($q, BikeStationsData) {
           latitude: station.latitude,
           longitude: station.longitude,
           name: station.name,
-          slotsavailable: station.slotsavailable,
-          bikesavailable: station.bikesavailable,
+          totalslots: toInt(station.slotsavailable) + toInt(station.bikesavailable),
+          slotsavailable: toInt(station.slotsavailable),
+          bikesavailable: toInt(station.bikesavailable),
           district: station.district
         };
       });
@@ -45,7 +50,7 @@ function BikeStationsViewDataService($q, BikeStationsData) {
     this.getBikeStations().then(onGetAllBikesStations, deferred.reject);
 
     return deferred.promise;
-  }
+  };
 }
 
 module.exports = BikeStationsViewDataService;
