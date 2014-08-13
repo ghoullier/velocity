@@ -21,8 +21,8 @@ angular.module('velocity', [
   view.name
 ]);
 
-}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_8f339156.js","/")
-},{"../../vendor/angular-resource/angular-resource":19,"../../vendor/angular-route/angular-route":20,"../../vendor/angular-touch/angular-touch":21,"../../vendor/angular/angular":22,"./modules/common/module":3,"./modules/data/module":6,"./modules/view-data/module":8,"./modules/view/module":14,"Wb8Gej":18,"buffer":15}],2:[function(require,module,exports){
+}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_34ee95c3.js","/")
+},{"../../vendor/angular-resource/angular-resource":20,"../../vendor/angular-route/angular-route":21,"../../vendor/angular-touch/angular-touch":22,"../../vendor/angular/angular":23,"./modules/common/module":3,"./modules/data/module":6,"./modules/view-data/module":8,"./modules/view/module":15,"Wb8Gej":19,"buffer":16}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -42,7 +42,7 @@ TracerFactory.$inject = ["$log"];
 module.exports = TracerFactory;
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/common/factory/tracer.js","/modules/common/factory")
-},{"Wb8Gej":18,"buffer":15}],3:[function(require,module,exports){
+},{"Wb8Gej":19,"buffer":16}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -53,7 +53,7 @@ module.exports = angular
   .factory('Tracer', TracerFactory);
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/common/module.js","/modules/common")
-},{"./factory/tracer":2,"Wb8Gej":18,"buffer":15}],4:[function(require,module,exports){
+},{"./factory/tracer":2,"Wb8Gej":19,"buffer":16}],4:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -64,7 +64,7 @@ module.exports = {
 };
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/data/constant/api.js","/modules/data/constant")
-},{"Wb8Gej":18,"buffer":15}],5:[function(require,module,exports){
+},{"Wb8Gej":19,"buffer":16}],5:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -79,7 +79,7 @@ HttpCacheFactory.$inject = ["$cacheFactory"];
 module.exports = HttpCacheFactory;
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/data/factory/http-cache.js","/modules/data/factory")
-},{"Wb8Gej":18,"buffer":15}],6:[function(require,module,exports){
+},{"Wb8Gej":19,"buffer":16}],6:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -94,7 +94,7 @@ module.exports = angular
   .service('BikeStationsData', BikeStationsData);
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/data/module.js","/modules/data")
-},{"./constant/api":4,"./factory/http-cache":5,"./service/bike-stations":7,"Wb8Gej":18,"buffer":15}],7:[function(require,module,exports){
+},{"./constant/api":4,"./factory/http-cache":5,"./service/bike-stations":7,"Wb8Gej":19,"buffer":16}],7:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -125,7 +125,7 @@ BikeStationsDataService.$inject = ["$http", "$log", "HttpCache", "OpenDataApi"];
 module.exports = BikeStationsDataService;
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/data/service/bike-stations.js","/modules/data/service")
-},{"Wb8Gej":18,"buffer":15}],8:[function(require,module,exports){
+},{"Wb8Gej":19,"buffer":16}],8:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -136,7 +136,7 @@ module.exports = angular
   .service('BikeStationsViewData', BikeStationsViewData);
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/view-data/module.js","/modules/view-data")
-},{"./service/bike-stations":9,"Wb8Gej":18,"buffer":15}],9:[function(require,module,exports){
+},{"./service/bike-stations":9,"Wb8Gej":19,"buffer":16}],9:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -155,8 +155,7 @@ function BikeStationsViewDataService($q, BikeStationsData) {
           id: station.number,
           latitude: station.latitude,
           longitude: station.longitude,
-          showWindow: true,
-          title: station.name,
+          name: station.name,
           slotsavailable: station.slotsavailable,
           bikesavailable: station.bikesavailable,
           district: station.district
@@ -171,13 +170,29 @@ function BikeStationsViewDataService($q, BikeStationsData) {
 
     return deferred.promise;
   };
+
+  this.getBikeStationById = function getBikeStationById(id) {
+    var deferred = $q.defer();
+
+    function onGetAllBikesStations(stations) {
+      stations.forEach(function (station) {
+        if (id === station.id) {
+          deferred.resolve(station);
+        }
+      });
+    }
+
+    this.getBikeStations().then(onGetAllBikesStations, deferred.reject);
+
+    return deferred.promise;
+  }
 }
 BikeStationsViewDataService.$inject = ["$q", "BikeStationsData"];
 
 module.exports = BikeStationsViewDataService;
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/view-data/service/bike-stations.js","/modules/view-data/service")
-},{"Wb8Gej":18,"buffer":15}],10:[function(require,module,exports){
+},{"Wb8Gej":19,"buffer":16}],10:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -194,6 +209,10 @@ function UiRouteConfig($routeProvider, $locationProvider) {
       templateUrl: 'views/bike-stations.html',
       controller: 'BikeStationsController as ctrl'
     })
+   .when('/bike-stations/:id', {
+      templateUrl: 'views/bike-station-detail.html',
+      controller: 'BikeStationDetailController as ctrl'
+    })
     .otherwise({
       redirectTo: '/welcome'
     }) ;
@@ -206,7 +225,25 @@ UiRouteConfig.$inject = ["$routeProvider", "$locationProvider"];
 module.exports = UiRouteConfig;
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/view/config/route.js","/modules/view/config")
-},{"Wb8Gej":18,"buffer":15}],11:[function(require,module,exports){
+},{"Wb8Gej":19,"buffer":16}],11:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+'use strict';
+
+/**
+ * @ngInject
+ */
+function BikeStationDetailController($scope, $routeParams, BikeStationsViewData) {
+  $scope.station = {};
+  BikeStationsViewData.getBikeStationById($routeParams.id).then(function (station) {
+    $scope.station = station;
+  });
+}
+BikeStationDetailController.$inject = ["$scope", "$routeParams", "BikeStationsViewData"];
+
+module.exports = BikeStationDetailController;
+
+}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/view/controller/bike-station-detail.js","/modules/view/controller")
+},{"Wb8Gej":19,"buffer":16}],12:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -224,7 +261,7 @@ BikeStationsController.$inject = ["$scope", "BikeStationsViewData"];
 module.exports = BikeStationsController;
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/view/controller/bike-stations.js","/modules/view/controller")
-},{"Wb8Gej":18,"buffer":15}],12:[function(require,module,exports){
+},{"Wb8Gej":19,"buffer":16}],13:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -239,7 +276,7 @@ NavigationController.$inject = ["$scope"];
 module.exports = NavigationController;
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/view/controller/navigation.js","/modules/view/controller")
-},{"Wb8Gej":18,"buffer":15}],13:[function(require,module,exports){
+},{"Wb8Gej":19,"buffer":16}],14:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -254,13 +291,14 @@ WelcomeController.$inject = ["$scope"];
 module.exports = WelcomeController;
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/view/controller/welcome.js","/modules/view/controller")
-},{"Wb8Gej":18,"buffer":15}],14:[function(require,module,exports){
+},{"Wb8Gej":19,"buffer":16}],15:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
 var NavigationController = require('./controller/navigation');
 var WelcomeController = require('./controller/welcome');
 var BikeStationsController = require('./controller/bike-stations');
+var BikeStationDetailController = require('./controller/bike-station-detail');
 var UiRouteConfig = require('./config/route');
 
 module.exports = angular
@@ -268,10 +306,11 @@ module.exports = angular
   .config(UiRouteConfig)
   .controller('NavigationController', NavigationController)
   .controller('WelcomeController', WelcomeController)
-  .controller('BikeStationsController', BikeStationsController);
+  .controller('BikeStationsController', BikeStationsController)
+  .controller('BikeStationDetailController', BikeStationDetailController);
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/view/module.js","/modules/view")
-},{"./config/route":10,"./controller/bike-stations":11,"./controller/navigation":12,"./controller/welcome":13,"Wb8Gej":18,"buffer":15}],15:[function(require,module,exports){
+},{"./config/route":10,"./controller/bike-station-detail":11,"./controller/bike-stations":12,"./controller/navigation":13,"./controller/welcome":14,"Wb8Gej":19,"buffer":16}],16:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!
  * The buffer module from node.js, for the browser.
@@ -1384,7 +1423,7 @@ function assert (test, message) {
 }
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/browserify/node_modules/buffer/index.js","/../../node_modules/browserify/node_modules/buffer")
-},{"Wb8Gej":18,"base64-js":16,"buffer":15,"ieee754":17}],16:[function(require,module,exports){
+},{"Wb8Gej":19,"base64-js":17,"buffer":16,"ieee754":18}],17:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
@@ -1508,7 +1547,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/browserify/node_modules/buffer/node_modules/base64-js/lib/b64.js","/../../node_modules/browserify/node_modules/buffer/node_modules/base64-js/lib")
-},{"Wb8Gej":18,"buffer":15}],17:[function(require,module,exports){
+},{"Wb8Gej":19,"buffer":16}],18:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports.read = function(buffer, offset, isLE, mLen, nBytes) {
   var e, m,
@@ -1596,7 +1635,7 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
 };
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/browserify/node_modules/buffer/node_modules/ieee754/index.js","/../../node_modules/browserify/node_modules/buffer/node_modules/ieee754")
-},{"Wb8Gej":18,"buffer":15}],18:[function(require,module,exports){
+},{"Wb8Gej":19,"buffer":16}],19:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // shim for using process in browser
 
@@ -1663,7 +1702,7 @@ process.chdir = function (dir) {
 };
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/browserify/node_modules/process/browser.js","/../../node_modules/browserify/node_modules/process")
-},{"Wb8Gej":18,"buffer":15}],19:[function(require,module,exports){
+},{"Wb8Gej":19,"buffer":16}],20:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * @license AngularJS v1.3.0-build.3041+sha.f30e2d0
@@ -2329,7 +2368,7 @@ angular.module('ngResource', ['ng']).
 })(window, window.angular);
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../vendor/angular-resource/angular-resource.js","/../../vendor/angular-resource")
-},{"Wb8Gej":18,"buffer":15}],20:[function(require,module,exports){
+},{"Wb8Gej":19,"buffer":16}],21:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * @license AngularJS v1.3.0-build.3041+sha.f30e2d0
@@ -3257,7 +3296,7 @@ ngViewFillContentFactory.$inject = ["$compile", "$controller", "$route"];functio
 })(window, window.angular);
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../vendor/angular-route/angular-route.js","/../../vendor/angular-route")
-},{"Wb8Gej":18,"buffer":15}],21:[function(require,module,exports){
+},{"Wb8Gej":19,"buffer":16}],22:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * @license AngularJS v1.3.0-build.3041+sha.f30e2d0
@@ -3882,7 +3921,7 @@ makeSwipeDirective('ngSwipeRight', 1, 'swiperight');
 })(window, window.angular);
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../vendor/angular-touch/angular-touch.js","/../../vendor/angular-touch")
-},{"Wb8Gej":18,"buffer":15}],22:[function(require,module,exports){
+},{"Wb8Gej":19,"buffer":16}],23:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /**
  * @license AngularJS v1.3.0-build.3041+sha.f30e2d0
@@ -27374,4 +27413,4 @@ var styleDirective = valueFn({
 
 !window.angular.$$csp() && window.angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-animate){display:none !important;}ng\\:form{display:block;}</style>');
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../vendor/angular/angular.js","/../../vendor/angular")
-},{"Wb8Gej":18,"buffer":15}]},{},[1])
+},{"Wb8Gej":19,"buffer":16}]},{},[1])
