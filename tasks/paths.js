@@ -4,7 +4,7 @@ module.exports = {
     mainJs: 'app/scripts/main.js',
     scripts: 'app/scripts/**/*.js',
     styles: 'app/styles/**/*.scss',
-    views: 'app/**/*.html'
+    views: 'app/views/**/*.html'
   },
   dist: {
     root: 'dist/',

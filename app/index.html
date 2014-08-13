@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My awesome app</title>
+    <title>Velocity</title>
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body ng-controller='WelcomeController as welcome'>
-
-    <h1>My awesome app</h1>
-
-    <p>{{testVar}}</p>
-
+  <body>
+    <nav role="navigation" ng-controller="NavigationController as navigation">
+      <ul>
+        <li>
+          <a ng-href="/welcome">Accueil</a>
+        </li>
+      </ul>
+    </nav>
+    <main role="content" ng-view></main>
     <script src="js/bundle.js"></script>
   </body>
 </html>

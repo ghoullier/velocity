@@ -3,8 +3,7 @@
 /**
  * @ngInject
  */
-function WelcomeController($scope, Tracer) {
-  Tracer.trace(WelcomeController);
+function WelcomeController($scope) {
   $scope.testVar = 'We are up and running from a required module! :)';
 }
 
