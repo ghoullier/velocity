@@ -12,17 +12,17 @@ require('../../vendor/angular-touch/angular-touch');
 var common = require('./modules/common/module');
 var data = require('./modules/data/module');
 var viewData = require('./modules/view-data/module');
-var ui = require('./modules/ui/module');
+var view = require('./modules/view/module');
 
 angular.module('velocity', [
   common.name,
   data.name,
   viewData.name,
-  ui.name
+  view.name
 ]);
 
-}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_c6ee4195.js","/")
-},{"../../vendor/angular-resource/angular-resource":18,"../../vendor/angular-route/angular-route":19,"../../vendor/angular-touch/angular-touch":20,"../../vendor/angular/angular":21,"./modules/common/module":3,"./modules/data/module":5,"./modules/ui/module":11,"./modules/view-data/module":12,"Wb8Gej":17,"buffer":14}],2:[function(require,module,exports){
+}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_13a9cd58.js","/")
+},{"../../vendor/angular-resource/angular-resource":18,"../../vendor/angular-route/angular-route":19,"../../vendor/angular-touch/angular-touch":20,"../../vendor/angular/angular":21,"./modules/common/module":3,"./modules/data/module":5,"./modules/view-data/module":7,"./modules/view/module":13,"Wb8Gej":17,"buffer":14}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -111,100 +111,6 @@ module.exports = BikeStationsData;
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
-/**
- * @ngInject
- */
-function UiRouteConfig($routeProvider, $locationProvider) {
-  $routeProvider
-   .when('/welcome', {
-      templateUrl: 'views/welcome.html',
-      controller: 'WelcomeController as ctrl'
-    })
-   .when('/bike-stations', {
-      templateUrl: 'views/bike-stations.html',
-      controller: 'BikeStationsController as ctrl'
-    })
-    .otherwise({
-      redirectTo: '/welcome'
-    }) ;
-
-  // Configure html5
-  $locationProvider.html5Mode(false);
-}
-UiRouteConfig.$inject = ["$routeProvider", "$locationProvider"];
-
-module.exports = UiRouteConfig;
-
-}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/ui/config/route.js","/modules/ui/config")
-},{"Wb8Gej":17,"buffer":14}],8:[function(require,module,exports){
-(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-'use strict';
-
-/**
- * @ngInject
- */
-function BikeStationsController($scope, BikeStationsViewData) {
-  $scope.stations = [];
-  BikeStationsViewData.getBikeStations().then(function(stations) {
-    $scope.stations = stations;
-  });
-}
-BikeStationsController.$inject = ["$scope", "BikeStationsViewData"];
-
-module.exports = BikeStationsController;
-
-}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/ui/controller/bike-stations.js","/modules/ui/controller")
-},{"Wb8Gej":17,"buffer":14}],9:[function(require,module,exports){
-(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-'use strict';
-
-/**
- * @ngInject
- */
-function NavigationController($scope) {
-  $scope.links = [];
-}
-NavigationController.$inject = ["$scope"];
-
-module.exports = NavigationController;
-
-}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/ui/controller/navigation.js","/modules/ui/controller")
-},{"Wb8Gej":17,"buffer":14}],10:[function(require,module,exports){
-(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-'use strict';
-
-/**
- * @ngInject
- */
-function WelcomeController($scope) {
-  $scope.testVar = 'We are up and running from a required module! :)';
-}
-WelcomeController.$inject = ["$scope"];
-
-module.exports = WelcomeController;
-
-}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/ui/controller/welcome.js","/modules/ui/controller")
-},{"Wb8Gej":17,"buffer":14}],11:[function(require,module,exports){
-(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-'use strict';
-
-var NavigationController = require('./controller/navigation');
-var WelcomeController = require('./controller/welcome');
-var BikeStationsController = require('./controller/bike-stations');
-var UiRouteConfig = require('./config/route');
-
-module.exports = angular
-  .module('velocity.ui', ['ngRoute', 'ngTouch'])
-  .config(UiRouteConfig)
-  .controller('NavigationController', NavigationController)
-  .controller('WelcomeController', WelcomeController)
-  .controller('BikeStationsController', BikeStationsController);
-
-}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/ui/module.js","/modules/ui")
-},{"./config/route":7,"./controller/bike-stations":8,"./controller/navigation":9,"./controller/welcome":10,"Wb8Gej":17,"buffer":14}],12:[function(require,module,exports){
-(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-'use strict';
-
 var BikeStationsViewData = require('./service/bike-stations');
 
 module.exports = angular
@@ -212,7 +118,7 @@ module.exports = angular
   .service('BikeStationsViewData', BikeStationsViewData);
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/view-data/module.js","/modules/view-data")
-},{"./service/bike-stations":13,"Wb8Gej":17,"buffer":14}],13:[function(require,module,exports){
+},{"./service/bike-stations":8,"Wb8Gej":17,"buffer":14}],8:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -253,7 +159,101 @@ BikeStationsViewData.$inject = ["$q", "BikeStationsData"];
 module.exports = BikeStationsViewData;
 
 }).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/view-data/service/bike-stations.js","/modules/view-data/service")
-},{"Wb8Gej":17,"buffer":14}],14:[function(require,module,exports){
+},{"Wb8Gej":17,"buffer":14}],9:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+'use strict';
+
+/**
+ * @ngInject
+ */
+function UiRouteConfig($routeProvider, $locationProvider) {
+  $routeProvider
+   .when('/welcome', {
+      templateUrl: 'views/welcome.html',
+      controller: 'WelcomeController as ctrl'
+    })
+   .when('/bike-stations', {
+      templateUrl: 'views/bike-stations.html',
+      controller: 'BikeStationsController as ctrl'
+    })
+    .otherwise({
+      redirectTo: '/welcome'
+    }) ;
+
+  // Configure html5
+  $locationProvider.html5Mode(false);
+}
+UiRouteConfig.$inject = ["$routeProvider", "$locationProvider"];
+
+module.exports = UiRouteConfig;
+
+}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/view/config/route.js","/modules/view/config")
+},{"Wb8Gej":17,"buffer":14}],10:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+'use strict';
+
+/**
+ * @ngInject
+ */
+function BikeStationsController($scope, BikeStationsViewData) {
+  $scope.stations = [];
+  BikeStationsViewData.getBikeStations().then(function(stations) {
+    $scope.stations = stations;
+  });
+}
+BikeStationsController.$inject = ["$scope", "BikeStationsViewData"];
+
+module.exports = BikeStationsController;
+
+}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/view/controller/bike-stations.js","/modules/view/controller")
+},{"Wb8Gej":17,"buffer":14}],11:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+'use strict';
+
+/**
+ * @ngInject
+ */
+function NavigationController($scope) {
+  $scope.links = [];
+}
+NavigationController.$inject = ["$scope"];
+
+module.exports = NavigationController;
+
+}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/view/controller/navigation.js","/modules/view/controller")
+},{"Wb8Gej":17,"buffer":14}],12:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+'use strict';
+
+/**
+ * @ngInject
+ */
+function WelcomeController($scope) {
+  $scope.testVar = 'We are up and running from a required module! :)';
+}
+WelcomeController.$inject = ["$scope"];
+
+module.exports = WelcomeController;
+
+}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/view/controller/welcome.js","/modules/view/controller")
+},{"Wb8Gej":17,"buffer":14}],13:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+'use strict';
+
+var NavigationController = require('./controller/navigation');
+var WelcomeController = require('./controller/welcome');
+var BikeStationsController = require('./controller/bike-stations');
+var UiRouteConfig = require('./config/route');
+
+module.exports = angular
+  .module('velocity.view', ['ngRoute', 'ngTouch'])
+  .config(UiRouteConfig)
+  .controller('NavigationController', NavigationController)
+  .controller('WelcomeController', WelcomeController)
+  .controller('BikeStationsController', BikeStationsController);
+
+}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/modules/view/module.js","/modules/view")
+},{"./config/route":9,"./controller/bike-stations":10,"./controller/navigation":11,"./controller/welcome":12,"Wb8Gej":17,"buffer":14}],14:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!
  * The buffer module from node.js, for the browser.
