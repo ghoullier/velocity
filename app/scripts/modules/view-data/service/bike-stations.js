@@ -3,7 +3,7 @@
 /**
  * @ngInject
  */
-function BikeStationsViewData($q, BikeStationsData) {
+function BikeStationsViewDataService($q, BikeStationsData) {
 
   this.getBikeStations = function getBikeStations() {
     var deferred = $q.defer();
@@ -33,4 +33,4 @@ function BikeStationsViewData($q, BikeStationsData) {
   };
 }
 
-module.exports = BikeStationsViewData;
+module.exports = BikeStationsViewDataService;

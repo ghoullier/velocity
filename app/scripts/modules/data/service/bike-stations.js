@@ -3,7 +3,7 @@
 /**
  * @ngInject
  */
-function BikeStationsData($http, $log, OpenDataApi) {
+function BikeStationsDataService($http, $log, HttpCache, OpenDataApi) {
 
   function request(command) {
     return $http({
@@ -13,7 +13,8 @@ function BikeStationsData($http, $log, OpenDataApi) {
         version: OpenDataApi.version,
         key: OpenDataApi.key,
         cmd: command
-      }
+      },
+      cache: HttpCache
     });
   }
 
@@ -22,4 +23,4 @@ function BikeStationsData($http, $log, OpenDataApi) {
   };
 }
 
-module.exports = BikeStationsData;
+module.exports = BikeStationsDataService;
