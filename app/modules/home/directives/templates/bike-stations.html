@@ -16,6 +16,7 @@ state: "1"
   <h4>Stations</h4>
   <div class="velocity-bike-stations-grid" ng-grid="gridOptions"></div>
   <google-map center="mapCenter" zoom="mapZoom" draggable="true">
+    <marker ng-if="mapCenter.longitude" coords="mapCenter"></marker>
     <marker ng-repeat="item in selectedItems" coords="item"></marker>
   </google-map>
 <!--
