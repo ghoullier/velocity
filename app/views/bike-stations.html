@@ -1,0 +1,10 @@
+<h1>Stations de vélos</h1>
+<ul>
+  <li ng-repeat="station in stations">
+    <a ng-href="#/bike-stations/{{station.id}}">
+      <span>{{station.id}}</span>
+      <span>{{station.name}}</span>
+      <span>{{station.slotsavailable}}</span>/<span>{{station.bikesavailable}}</span>
+    </a>
+  </li>
+</ul>
