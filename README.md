@@ -1,45 +1,9 @@
-# AngularJS Boilerplate
+# Velocity
 
-Provide structure and automation to manage AngularJS projects
+A simple web app to check VeloStar availability
 
-Based on https://github.com/Hyra/angular-gulp-browserify-livereload-boilerplate
+Based on https://github.com/ghoullier/angular-boilerplate
 
-## Dependencies
-
-### CommonJS Modules
-
-- browserify
-- gulp-browserify
-
----
-
-### Web Server and Livereload
-
-- express
-- connect-livereload
-- gulp-livereload
-
----
-
-### JS utilities
-
-- gulp-jshint
-- gulp-uglify
-
----
-
-### CSS utilities
-
-- gulp-autoprefixer
-- gulp-sass
-
----
-
-### AngularJS utilities
-
-- gulp-ng-annotate
-
----
 
 ## Installation
 
