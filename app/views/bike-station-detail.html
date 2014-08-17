@@ -1,0 +1,17 @@
+<h1>Station {{station.name}}</h1>
+<h3>Quartier {{station.district}}</h3>
+<div>
+  <label for="slots_available_{{station.id}}">
+    <span>Places disponibles :</span>
+    <meter id="slots_available_{{station.id}}" min="0" optimum="{{(station.totalslots)/2}}" low="{{(station.totalslots)*1/4}}" high="{{(station.totalslots)*3/4}}" max="{{station.totalslots}}" value="{{station.slotsavailable}}">{{station.slotsavailable}}</meter>
+  </label>
+</div>
+<div>
+  <label for="bikes_available_{{station.id}}">
+    <span>Vélos disponibles :</span>
+    <meter id="bikes_available_{{station.id}}" min="0" optimum="{{(station.totalslots)/2}}" low="{{(station.totalslots)*1/4}}" high="{{(station.totalslots)*3/4}}" max="{{station.totalslots}}" value="{{station.bikesavailable}}">{{station.bikesavailable}}</meter>
+  </label>
+</div>
+<section id="map">
+  <div class="map" ui-map="map" ui-options="options"></div>
+</section>
