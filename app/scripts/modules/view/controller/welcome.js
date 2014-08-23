@@ -1,10 +1,12 @@
 'use strict';
 
+var pkg = require('../../../../../package');
+
 /**
  * @ngInject
  */
 function WelcomeController($scope) {
-  $scope.testVar = 'We are up and running from a required module! :)';
+  $scope.appVersion = pkg.version;
 }
 
 module.exports = WelcomeController;
