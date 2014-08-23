@@ -18,9 +18,9 @@ module.exports = function() {
       remove: true,
       add: true
     }))
-    // .pipe(uglify({
-    //   mangle: true
-    // }))
+    .pipe(uglify({
+      mangle: true
+    }))
     // Bundle to a single file
     .pipe(concat('bundle.js'))
     // Output it to our dist folder
