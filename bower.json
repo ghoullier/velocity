@@ -1,6 +1,5 @@
 {
   "name": "velocity",
-  "version": "0.0.1",
   "devDependencies": {},
   "dependencies": {
     "angular": "~1.3",
