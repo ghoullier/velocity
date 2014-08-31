@@ -14,3 +14,7 @@
 
 - New Welcome page
 - Session Storage based HTTP Cache
+
+### v0.0.3
+
+- Add geolocation service
