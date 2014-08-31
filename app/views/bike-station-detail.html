@@ -12,6 +12,9 @@
     <meter id="bikes_available_{{station.id}}" min="0" optimum="{{(station.totalslots)/2}}" low="{{(station.totalslots)*1/4}}" high="{{(station.totalslots)*3/4}}" max="{{station.totalslots}}" value="{{station.bikesavailable}}">{{station.bikesavailable}}</meter>
   </label>
 </div>
+<nav>
+  <button ng-click="ctrl.geolocalize()">Geolocalize</button>
+</nav>
 <section id="map">
   <div class="map" ui-map="map" ui-options="options"></div>
 </section>

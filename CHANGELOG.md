@@ -9,3 +9,12 @@
 - Welcome page
 - Bike stations list
 - Bike stattion detail
+
+### v0.0.2
+
+- New Welcome page
+- Session Storage based HTTP Cache
+
+### v0.0.3
+
+- Add geolocation service

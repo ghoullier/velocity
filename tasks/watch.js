@@ -12,7 +12,7 @@ module.exports = function() {
     'styles'
   ]);
 
-  gulp.watch([paths.sources.views], [
+  gulp.watch([paths.sources.mainHtml, paths.sources.views], [
     'views'
   ]);
 };
