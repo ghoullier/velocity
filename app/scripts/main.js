@@ -9,14 +9,7 @@ require('../../vendor/angular-ui-utils/ui-utils');
 require('../../vendor/angular-ui-map/ui-map');
 
 // Require application modules
-var common = require('./modules/common/module');
-var data = require('./modules/data/module');
-var viewData = require('./modules/view-data/module');
-var view = require('./modules/view/module');
-
-angular.module('velocity', [
-  common.name,
-  data.name,
-  viewData.name,
-  view.name
-]);
+require('./modules/common/module');
+require('./modules/data/module');
+require('./modules/view-data/module');
+require('./modules/view/module');
