@@ -2,7 +2,7 @@
 
 A simple web app to check VeloStar availability
 
-Based on https://github.com/ghoullier/angular-boilerplate
+Based on https://github.com/ghoullier/angular-devstack
 
 
 ## Installation
@@ -10,7 +10,7 @@ Based on https://github.com/ghoullier/angular-boilerplate
 ```
 # Install gulp and bower as global dependency
 npm install gulp bower -g
-# Install boilerplate dependencies
+# Install devstack dependencies
 npm install
 # Start dev task
 npm start
