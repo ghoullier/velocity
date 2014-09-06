@@ -13,7 +13,7 @@ module.exports = angular
     'ngTouch',
     'ui.map',
     'velocity.common',
-    'velocity.view-data'
+    'velocity.data-view'
   ])
   .config(UiRouteConfig)
   .controller('NavigationController', NavigationController)
