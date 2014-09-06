@@ -39,7 +39,7 @@ function BikeStationsViewDataService($q, BikeStationsData) {
   this.getBikeStationById = function getBikeStationById(id) {
     var deferred = $q.defer();
 
-    function onGetAllBikesStations(stations) {
+    function onGetBikesStations(stations) {
       stations.forEach(function (station) {
         if (id === station.id) {
           deferred.resolve(station);
@@ -47,7 +47,7 @@ function BikeStationsViewDataService($q, BikeStationsData) {
       });
     }
 
-    this.getBikeStations().then(onGetAllBikesStations, deferred.reject);
+    this.getBikeStations().then(onGetBikesStations, deferred.reject);
 
     return deferred.promise;
   };

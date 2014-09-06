@@ -1,9 +1,11 @@
 'use strict';
 
-var BikeStationsViewData = require('./service/bike-stations');
+var BikeStationsViewDataService = require('./service/bike-stations');
+var LinesViewDataService = require('./service/lines');
 
 module.exports = angular
   .module('velocity.view-data', [
     'velocity.data'
   ])
-  .service('BikeStationsViewData', BikeStationsViewData);
+  .service('BikeStationsViewData', BikeStationsViewDataService)
+  .service('LinesViewData', LinesViewDataService);

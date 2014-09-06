@@ -17,9 +17,13 @@ function UiRouteConfig($routeProvider, $locationProvider) {
       templateUrl: 'views/bike-station-detail.html',
       controller: 'BikeStationDetailController as ctrl'
     })
+   .when('/lines', {
+      templateUrl: 'views/lines.html',
+      controller: 'LinesController as ctrl'
+    })
     .otherwise({
       redirectTo: '/welcome'
-    }) ;
+    });
 
   // Configure html5
   $locationProvider.html5Mode(false);

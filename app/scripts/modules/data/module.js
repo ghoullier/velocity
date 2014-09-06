@@ -2,8 +2,10 @@
 
 var CacheConfig = require('./config/cache');
 var OpenDataApi = require('./constant/api');
-var BikeStationsData = require('./service/bike-stations');
-var HttpCache = require('./factory/http-cache');
+var HttpCacheFactory = require('./factory/http-cache');
+var ApiRequestFactory = require('./factory/api-request');
+var BikeStationsDataService = require('./service/bike-stations');
+var LinesDataService = require('./service/lines');
 
 module.exports = angular
   .module('velocity.data', [
@@ -12,5 +14,7 @@ module.exports = angular
   ])
   .config(CacheConfig)
   .constant('OpenDataApi', OpenDataApi)
-  .factory('HttpCache', HttpCache)
-  .service('BikeStationsData', BikeStationsData);
+  .factory('HttpCache', HttpCacheFactory)
+  .factory('ApiRequest', ApiRequestFactory)
+  .service('BikeStationsData', BikeStationsDataService)
+  .service('LinesData', LinesDataService);
