@@ -1,3 +1,4 @@
+var util = require('gulp-util');
 var config = require('./config');
 var server = require('./server');
 var lrserver = require('./live-reload');
@@ -8,5 +9,5 @@ module.exports = function() {
   // Start live reload
   lrserver.listen(config.livereloadport);
   // Notify server is running
-  console.log('Server is running on http://localhost:' + config.serverport);
+  util.log('Server is running  on: ' + util.colors.magenta('http://localhost:' + config.serverport));
 };
