@@ -3,7 +3,7 @@
 /**
  * @ngInject
  */
-function ApiRequestFactory($http, HttpCache, OpenDataApi) {
+function ApiServiceFactory($http, HttpCache, OpenDataApi) {
   var defautParams = {
       version: OpenDataApi.version,
       key: OpenDataApi.key
@@ -17,14 +17,18 @@ function ApiRequestFactory($http, HttpCache, OpenDataApi) {
     });
     return params;
   }
-  return function ApiRequest(command, args) {
-    return $http({
-      url: OpenDataApi.url,
-      method: 'GET',
-      params: getQueryParams(command, args),
-      cache: HttpCache
-    });
+  return function ApiService(command) {
+    return {
+      get: function(args) {
+        return $http({
+          url: OpenDataApi.url,
+          method: 'GET',
+          params: getQueryParams(command, args),
+          cache: HttpCache
+        });
+      }
+    };
   };
 }
 
-module.exports = ApiRequestFactory;
+module.exports = ApiServiceFactory;
