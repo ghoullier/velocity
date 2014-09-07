@@ -6,7 +6,9 @@
 function LinesController($scope, LinesDataView) {
   $scope.lines = [];
   $scope.baseUrl = '';
-  LinesDataView.get().then(function(data) {
+  LinesDataView.get({
+    size: 100
+  }).then(function(data) {
     $scope.baseUrl = data.baseurl;
     $scope.lines = data.line;
   });

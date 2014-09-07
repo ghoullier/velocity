@@ -10,7 +10,7 @@ function onMapDataViewDefault(data) {
 
 function GenericDataViewService($q, DataService, getDataViewByResponse, onMapDataView) {
 
-  this.get = function get() {
+  this.get = function get(args) {
     var deferred = $q.defer();
 
     function onGetWithSuccess(response) {
@@ -21,7 +21,7 @@ function GenericDataViewService($q, DataService, getDataViewByResponse, onMapDat
       deferred.resolve(data);
     }
 
-    DataService.get().then(onGetWithSuccess, deferred.reject);
+    DataService.get(args).then(onGetWithSuccess, deferred.reject);
 
     return deferred.promise;
   };
