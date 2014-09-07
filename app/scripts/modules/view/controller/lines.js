@@ -3,10 +3,10 @@
 /**
  * @ngInject
  */
-function LinesController($scope, LinesViewData) {
+function LinesController($scope, LinesDataView) {
   $scope.lines = [];
   $scope.baseUrl = '';
-  LinesViewData.getLines().then(function(data) {
+  LinesDataView.get().then(function(data) {
     $scope.baseUrl = data.baseurl;
     $scope.lines = data.line;
   });

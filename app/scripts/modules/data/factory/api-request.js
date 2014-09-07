@@ -17,7 +17,7 @@ function ApiRequestFactory($http, HttpCache, OpenDataApi) {
     });
     return params;
   }
-  return function request(command, args) {
+  return function ApiRequest(command, args) {
     return $http({
       url: OpenDataApi.url,
       method: 'GET',

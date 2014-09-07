@@ -3,9 +3,9 @@
 /**
  * @ngInject
  */
-function BikeStationsController($scope, BikeStationsViewData) {
+function BikeStationsController($scope, BikeStationsDataView) {
   $scope.stations = [];
-  BikeStationsViewData.getBikeStations().then(function(stations) {
+  BikeStationsDataView.get().then(function(stations) {
     $scope.stations = stations;
   });
 }

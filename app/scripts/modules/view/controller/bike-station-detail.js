@@ -3,7 +3,7 @@
 /**
  * @ngInject
  */
-function BikeStationDetailController($scope, $routeParams, BikeStationsViewData, Geolocation) {
+function BikeStationDetailController($scope, $routeParams, BikeStationsDataView, Geolocation) {
   $scope.station = {};
   $scope.map = {};
   $scope.options = {
@@ -11,7 +11,7 @@ function BikeStationDetailController($scope, $routeParams, BikeStationsViewData,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   $scope.markers = [];
-  BikeStationsViewData.getBikeStationById($routeParams.id).then(function (station) {
+  BikeStationsDataView.getById($routeParams.id).then(function (station) {
     var position = new google.maps.LatLng(station.latitude, station.longitude);
     $scope.station = station;
     $scope.map.panTo(position);

@@ -4,8 +4,7 @@
  * @ngInject
  */
 function HttpCacheFactory(CacheStorage) {
-  var cache = CacheStorage;
-  return cache('velocity:http-cache');
+  return CacheStorage('velocity:http-cache');
 }
 
 module.exports = HttpCacheFactory;

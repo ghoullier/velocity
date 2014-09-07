@@ -4,8 +4,7 @@
  * @ngInject
  */
 function BikeStationsDataService(ApiRequest) {
-
-  this.getBikeStations = function getBikeStations() {
+  this.get = function get() {
     return ApiRequest('getbikestations');
   };
 }

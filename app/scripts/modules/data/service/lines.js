@@ -4,8 +4,7 @@
  * @ngInject
  */
 function LinesDataService(ApiRequest) {
-
-  this.getLines = function getLines() {
+  this.get = function get() {
     return ApiRequest('getlines', {
       size: 100
     });

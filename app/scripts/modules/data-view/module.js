@@ -1,11 +1,13 @@
 'use strict';
 
-var BikeStationsViewDataService = require('./service/bike-stations');
-var LinesViewDataService = require('./service/lines');
+var DataViewFactory = require('./factory/data-view');
+var BikeStationsDataViewFactory = require('./factory/bike-stations');
+var LinesDataViewFactory = require('./factory/lines');
 
 module.exports = angular
   .module('velocity.data-view', [
     'velocity.data'
   ])
-  .service('BikeStationsViewData', BikeStationsViewDataService)
-  .service('LinesViewData', LinesViewDataService);
+  .factory('DataView', DataViewFactory)
+  .factory('BikeStationsDataView', BikeStationsDataViewFactory)
+  .factory('LinesDataView', LinesDataViewFactory);
