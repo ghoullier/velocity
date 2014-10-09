@@ -6,10 +6,11 @@ var handlers = require('./handlers');
 
 // JSHint task
 module.exports = function() {
-  return gulp.src(paths.sources.scripts)
+  var ignored = ['!', paths.modules.templates, 'module.js'].join('');
+  return gulp.src([paths.sources.scripts, ignored])
     // Catch errors
     .pipe(plumber({
-      errorHandler: handlers.onError
+      errorHandler: handlers.onGenericError
     }))
     .pipe(jshint())
     .pipe(jshint.reporter('default'));

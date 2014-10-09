@@ -1,29 +1,36 @@
 <!DOCTYPE html>
-<html ng-app="velocity.view" ng-strict-di>
+<html data-ng-app="velocity.view" data-ng-strict-di>
   <head>
+    <base href="/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Velocity</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <nav role="navigation" ng-controller="NavigationController as navigation">
-      <ul>
-        <li>
-          <a ng-href="#/welcome">Accueil</a>
-        </li>
-        <li>
-          <a ng-href="#/bike-stations">Stations de vélos</a>
-        </li>
-        <li>
-          <a ng-href="#/lines">Lignes de bus</a>
-        </li>
-      </ul>
-    </nav>
-    <main role="content" ng-view></main>
+    <div class="App">
+      <header class="App__Header">
+        <nav role="navigation" data-ng-controller="NavigationController as navigation">
+          <ul>
+            <li>
+              <a data-ng-href="#/welcome">Accueil</a>
+            </li>
+            <li>
+              <a data-ng-href="#/bike-stations">Stations de vélos</a>
+            </li>
+            <li>
+              <a data-ng-href="#/lines">Lignes de bus</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="App__View" data-ng-view data-ng-cloak></main>
+      <footer class="App__Footer">
+        <p>Crafted by <a href="https://twitter.com/ghoullier" title="Twitter Account">@ghoullier</a></p>
+      </footer>
+    </div>
     <script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <script src="js/vendor.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/app.templates.js"></script>
+    <script src="./js/vendor.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>

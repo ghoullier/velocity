@@ -1,10 +1,17 @@
 var util = require('gulp-util');
 
-function onError(error) {
+function onGenericError(error) {
   util.beep();
-  util.log(error);
+  util.log(util.colors.red(error));
+}
+
+function onBrowserifyError(error) {
+  util.beep();
+  util.log(util.colors.red(error.message));
+  this.end();
 }
 
 module.exports = {
-  onError: onError
+  onBrowserifyError: onBrowserifyError,
+  onGenericError: onGenericError
 };

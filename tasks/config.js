@@ -1,4 +1,7 @@
-module.exports = {
-  livereloadport : 35729,
-  serverport : 5000
+var gulp = require('gulp');
+var env = require('./env');
+var paths = require('./paths');
+
+module.exports = function() {
+
 };

@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var refresh = require('gulp-livereload');
 var plumber = require('gulp-plumber');
+var env = require('./env');
 var lrserver = require('./live-reload');
 var paths = require('./paths');
 var handlers = require('./handlers');
@@ -12,12 +13,12 @@ module.exports = function() {
   return gulp.src(paths.sources.styles)
     // Catch errors
     .pipe(plumber({
-      errorHandler: handlers.onError
+      errorHandler: handlers.onGenericError
     }))
     // The onerror handler prevents Gulp from crashing when you make a mistake in your SASS
     .pipe(sass({
-      onError: handlers.onError,
-      outputStyle: 'compressed'
+      onError: handlers.onGenericError,
+      outputStyle: env.production ? 'compressed' : 'expanded'
     }))
     // Optionally add autoprefixer
     .pipe(autoprefixer('last 2 versions', '> 1%'))

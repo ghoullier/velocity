@@ -1,6 +1,6 @@
 var util = require('gulp-util');
-var config = require('./config');
 var server = require('./server');
+var config = require('./server-config');
 var lrserver = require('./live-reload');
 
 module.exports = function() {

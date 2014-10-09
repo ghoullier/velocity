@@ -12,7 +12,7 @@ module.exports = function() {
   gulp.src(paths.sources.mainHtml)
     // Catch errors
     .pipe(plumber({
-      errorHandler: handlers.onError
+      errorHandler: handlers.onGenericError
     }))
     // Will minimify html
     .pipe(htmlmin({

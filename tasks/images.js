@@ -10,7 +10,7 @@ module.exports = function() {
   return gulp.src(paths.sources.images)
     // Catch errors
     .pipe(plumber({
-      errorHandler: handlers.onError
+      errorHandler: handlers.onGenericError
     }))
     .pipe(gulp.dest(paths.dist.images))
     .pipe(refresh(lrserver));

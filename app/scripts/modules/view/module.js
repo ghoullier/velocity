@@ -1,23 +1,18 @@
 'use strict';
 
-var UiRouteConfig = require('./config/route');
-var NavigationController = require('./controller/navigation');
-var WelcomeController = require('./controller/welcome');
-var BikeStationsController = require('./controller/bike-stations');
-var BikeStationDetailController = require('./controller/bike-station-detail');
-var LinesController = require('./controller/lines');
-
 module.exports = angular
   .module('velocity.view', [
     'ngRoute',
     'ngTouch',
     'ui.map',
     'velocity.common',
-    'velocity.data-view'
+    'velocity.data-view',
+    'velocity.templates'
   ])
-  .config(UiRouteConfig)
-  .controller('NavigationController', NavigationController)
-  .controller('WelcomeController', WelcomeController)
-  .controller('BikeStationsController', BikeStationsController)
-  .controller('BikeStationDetailController', BikeStationDetailController)
-  .controller('LinesController', LinesController);
+  .config(require('./config/route'))
+  .controller('NavigationController', require('./controller/navigation'))
+  .controller('WelcomeController', require('./controller/welcome'))
+  .controller('BikeStationsController', require('./controller/bike-stations'))
+  .controller('BikeStationDetailController', require('./controller/bike-station-detail'))
+  .controller('LinesController', require('./controller/lines'))
+;
