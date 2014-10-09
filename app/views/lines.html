@@ -1,8 +1,8 @@
 <h1>Lignes de bus</h1>
 <ul>
-  <li ng-repeat="line in lines">
-    <a ng-href="#/lines">
-      <img src="{{baseUrl}}{{line.picto}}" title="Ligne {{line.name}}" />
+  <li data-ng-repeat="line in vm.lines">
+    <a data-ng-href="#/lines">
+      <img data-ng-src="{{baseUrl}}{{line.picto}}" title="Ligne {{line.name}}" />
     </a>
   </li>
 </ul>

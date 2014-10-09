@@ -3,8 +3,13 @@
 /**
  * @ngInject
  */
-function NavigationController($scope) {
-  $scope.links = [];
+function Navigation() {
+  // ViewModel
+  var vm = this;
+
+  // Interface
+
+  vm.links = [];
 }
 
-module.exports = NavigationController;
+module.exports = Navigation;

@@ -10,9 +10,9 @@ module.exports = angular
     'velocity.templates'
   ])
   .config(require('./config/route'))
-  .controller('NavigationController', require('./controller/navigation'))
-  .controller('WelcomeController', require('./controller/welcome'))
-  .controller('BikeStationsController', require('./controller/bike-stations'))
-  .controller('BikeStationDetailController', require('./controller/bike-station-detail'))
-  .controller('LinesController', require('./controller/lines'))
+  .controller('Navigation', require('./controller/navigation'))
+  .controller('Welcome', require('./controller/welcome'))
+  .controller('BikeStations', require('./controller/bike-stations'))
+  .controller('BikeStationDetail', require('./controller/bike-station-detail'))
+  .controller('Lines', require('./controller/lines'))
 ;

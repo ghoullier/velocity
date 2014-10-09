@@ -1,20 +1,20 @@
-<h1>Station {{station.name}}</h1>
-<h3>Quartier {{station.district}}</h3>
+<h1>Station {{vm.station.name}}</h1>
+<h3>Quartier {{vm.station.district}}</h3>
 <div>
-  <label for="slots_available_{{station.id}}">
+  <label for="slots_available_{{vm.station.id}}">
     <span>Places disponibles :</span>
-    <meter id="slots_available_{{station.id}}" min="0" optimum="{{(station.totalslots)/2}}" low="{{(station.totalslots)*1/4}}" high="{{(station.totalslots)*3/4}}" max="{{station.totalslots}}" value="{{station.slotsavailable}}">{{station.slotsavailable}}</meter>
+    <meter id="slots_available_{{vm.station.id}}" min="0" optimum="{{(vm.station.totalslots)/2}}" low="{{(vm.station.totalslots)*1/4}}" high="{{(vm.station.totalslots)*3/4}}" max="{{vm.station.totalslots}}" value="{{vm.station.slotsavailable}}">{{vm.station.slotsavailable}}</meter>
   </label>
 </div>
 <div>
-  <label for="bikes_available_{{station.id}}">
+  <label for="bikes_available_{{vm.station.id}}">
     <span>Vélos disponibles :</span>
-    <meter id="bikes_available_{{station.id}}" min="0" optimum="{{(station.totalslots)/2}}" low="{{(station.totalslots)*1/4}}" high="{{(station.totalslots)*3/4}}" max="{{station.totalslots}}" value="{{station.bikesavailable}}">{{station.bikesavailable}}</meter>
+    <meter id="bikes_available_{{vm.station.id}}" min="0" optimum="{{(vm.station.totalslots)/2}}" low="{{(vm.station.totalslots)*1/4}}" high="{{(vm.station.totalslots)*3/4}}" max="{{vm.station.totalslots}}" value="{{vm.station.bikesavailable}}">{{vm.station.bikesavailable}}</meter>
   </label>
 </div>
 <nav>
-  <button ng-click="ctrl.geolocalize()">Geolocalize</button>
+  <button data-ng-click="ctrl.geolocalize()">Geolocalize</button>
 </nav>
 <section id="map">
-  <div class="map" ui-map="map" ui-options="options"></div>
+  <div class="map" data-ui-map="map" data-ui-options="options"></div>
 </section>

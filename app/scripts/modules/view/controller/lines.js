@@ -3,15 +3,21 @@
 /**
  * @ngInject
  */
-function LinesController($scope, LinesDataView) {
-  $scope.lines = [];
-  $scope.baseUrl = '';
+function Lines(LinesDataView) {
+  // ViewModel
+  var vm = this;
+
+  // Interface
+
+  vm.lines = [];
+  vm.baseUrl = '';
+
   LinesDataView.get({
     size: 100
   }).then(function(data) {
-    $scope.baseUrl = data.baseurl;
-    $scope.lines = data.line;
+    vm.baseUrl = data.baseurl;
+    vm.lines = data.line;
   });
 }
 
-module.exports = LinesController;
+module.exports = Lines;

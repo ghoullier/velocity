@@ -7,19 +7,19 @@ function UiRouteConfig($routeProvider, $locationProvider) {
   $routeProvider
    .when('/welcome', {
       templateUrl: 'views/welcome.html',
-      controller: 'WelcomeController as ctrl'
+      controller: 'Welcome as vm'
     })
    .when('/bike-stations', {
       templateUrl: 'views/bike-stations.html',
-      controller: 'BikeStationsController as ctrl'
+      controller: 'BikeStations as vm'
     })
    .when('/bike-stations/:id', {
       templateUrl: 'views/bike-station-detail.html',
-      controller: 'BikeStationDetailController as ctrl'
+      controller: 'BikeStationDetail as vm'
     })
    .when('/lines', {
       templateUrl: 'views/lines.html',
-      controller: 'LinesController as ctrl'
+      controller: 'Lines as vm'
     })
     .otherwise({
       redirectTo: '/welcome'
