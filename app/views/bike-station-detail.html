@@ -13,8 +13,8 @@
   </label>
 </div>
 <nav>
-  <button data-ng-click="ctrl.geolocalize()">Geolocalize</button>
+  <button data-ng-click="vm.geolocalize()">Geolocalize</button>
 </nav>
 <section id="map">
-  <div class="map" data-ui-map="map" data-ui-options="options"></div>
+  <div class="map" data-ui-map="vm.map" data-ui-options="vm.options"></div>
 </section>

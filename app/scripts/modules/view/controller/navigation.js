@@ -1,5 +1,7 @@
 'use strict';
 
+var routes = require('../config/routes');
+
 /**
  * @ngInject
  */
@@ -9,7 +11,17 @@ function Navigation() {
 
   // Interface
 
-  vm.links = [];
+  vm.links = routes
+    .filter(function onFilterRoute(route) {
+      return !route.params;
+    })
+    .map(function onMapRoute(route) {
+      return {
+        title: route.title,
+        url: route.url
+      };
+    })
+  ;
 }
 
 module.exports = Navigation;

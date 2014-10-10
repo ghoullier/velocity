@@ -9,7 +9,7 @@ module.exports = angular
     'velocity.data-view',
     'velocity.templates'
   ])
-  .config(require('./config/route'))
+  .config(require('./config/routing'))
   .controller('Navigation', require('./controller/navigation'))
   .controller('Welcome', require('./controller/welcome'))
   .controller('BikeStations', require('./controller/bike-stations'))

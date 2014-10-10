@@ -2,7 +2,7 @@
 <ul>
   <li data-ng-repeat="line in vm.lines">
     <a data-ng-href="#/lines">
-      <img data-ng-src="{{baseUrl}}{{line.picto}}" title="Ligne {{line.name}}" />
+      <img data-ng-src="{{vm.baseUrl}}{{line.picto}}" title="Ligne {{line.name}}" />
     </a>
   </li>
 </ul>
