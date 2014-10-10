@@ -2,7 +2,7 @@
 
 module.exports = angular
   .module('velocity.common', [])
-  .provider('CacheStorage', require('./provider/cache-storage'))
-  .service('Geolocation', require('./service/geolocation'))
-  .factory('Tracer', require('./factory/tracer'))
+  .provider('CacheStorage', require('./providers/cache-storage'))
+  .factory('Geolocation', require('./services/geolocation'))
+  .factory('Logger', require('./services/logger'))
 ;

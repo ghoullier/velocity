@@ -1,20 +1,31 @@
-# Change log
+# CHANGELOG
 
-## Versions
+## 0.1.0(2014-10)
 
-### v0.0.1
+#### Features
 
-> First version
+- Important refactoring:
+  - Update coding convetion
 
-- Welcome page
-- Bike stations list
-- Bike stattion detail
+## 0.0.3()
 
-### v0.0.2
+#### Features
+
+- Add geolocation service
+
+## 0.0.2()
+
+#### Features
 
 - New Welcome page
 - Session Storage based HTTP Cache
 
-### v0.0.3
+## 0.0.1()
 
-- Add geolocation service
+> First version
+
+#### Features
+
+- Welcome page
+- Bike stations list
+- Bike stattion detail
