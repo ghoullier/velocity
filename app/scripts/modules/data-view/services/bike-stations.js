@@ -29,4 +29,4 @@ function BikeStationsDataViewFactory($q, DataView, BikeStationsData) {
   return DataView(BikeStationsData, getBikeStationsDataViewByResponse, onMapBikeStationsDataView);
 }
 
-module.exports = BikeStationsDataViewFactory;
+export default BikeStationsDataViewFactory;

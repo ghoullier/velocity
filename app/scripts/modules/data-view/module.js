@@ -1,10 +1,14 @@
 'use strict';
 
-module.exports = angular
+import DataView from './services/data-view';
+import BikeStationsDataView from './services/bike-stations';
+import LinesDataView from './services/lines';
+
+export default angular
   .module('velocity.data-view', [
     'velocity.data'
   ])
-  .factory('DataView', require('./services/data-view'))
-  .factory('BikeStationsDataView', require('./services/bike-stations'))
-  .factory('LinesDataView', require('./services/lines'))
+  .factory('DataView', DataView)
+  .factory('BikeStationsDataView', BikeStationsDataView)
+  .factory('LinesDataView', LinesDataView)
 ;

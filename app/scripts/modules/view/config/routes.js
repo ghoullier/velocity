@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = [{
+export default [{
   url: '/welcome',
   title: 'Welcome',
   templateUrl: 'views/welcome/index.html',

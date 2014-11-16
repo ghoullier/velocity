@@ -7,4 +7,4 @@ function BikeStationsData(ApiService) {
   return ApiService('getbikestations');
 }
 
-module.exports = BikeStationsData;
+export default BikeStationsData;

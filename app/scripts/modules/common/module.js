@@ -1,8 +1,12 @@
 'use strict';
 
-module.exports = angular
+import CacheStorage from './providers/cache-storage';
+import Geolocation from './services/geolocation';
+import Logger from './services/logger';
+
+export default angular
   .module('velocity.common', [])
-  .provider('CacheStorage', require('./providers/cache-storage'))
-  .factory('Geolocation', require('./services/geolocation'))
-  .factory('Logger', require('./services/logger'))
+  .provider('CacheStorage', CacheStorage)
+  .factory('Geolocation', Geolocation)
+  .factory('Logger', Logger)
 ;

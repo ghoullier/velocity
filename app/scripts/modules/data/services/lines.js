@@ -7,4 +7,4 @@ function LinesData(ApiService) {
   return ApiService('getlines');
 }
 
-module.exports = LinesData;
+export default LinesData;

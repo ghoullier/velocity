@@ -1,6 +1,6 @@
 'use strict';
 
-var routes = require('./routes');
+import routes from './routes';
 
 /**
  * @ngInject
@@ -25,4 +25,4 @@ function UiRouteConfig($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(false);
 }
 
-module.exports = UiRouteConfig;
+export default UiRouteConfig;

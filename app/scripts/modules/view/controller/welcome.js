@@ -14,4 +14,4 @@ function Welcome() {
   vm.appVersion = pkg.version;
 }
 
-module.exports = Welcome;
+export default Welcome;

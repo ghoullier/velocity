@@ -8,4 +8,4 @@ function CacheConfig($windowProvider, CacheStorageProvider) {
   CacheStorageProvider.setStrategy($window.sessionStorage);
 }
 
-module.exports = CacheConfig;
+export default CacheConfig;

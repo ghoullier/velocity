@@ -7,4 +7,4 @@ function HttpCache(CacheStorage) {
   return CacheStorage('velocity:http-cache');
 }
 
-module.exports = HttpCache;
+export default HttpCache;

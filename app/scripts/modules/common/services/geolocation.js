@@ -22,4 +22,4 @@ function Geolocation($q, $window) {
   }
 }
 
-module.exports = Geolocation;
+export default Geolocation;

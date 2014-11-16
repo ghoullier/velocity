@@ -3,6 +3,7 @@ var util = require('gulp-util');
 var uglify = require('gulp-uglify');
 var browserify = require('browserify');
 var ngAnnotate = require('browserify-ngannotate');
+var to5 = require('6to5-browserify');
 var stream = require('vinyl-source-stream2');
 var env = require('./env');
 var paths = require('./paths');
@@ -13,6 +14,8 @@ module.exports = function() {
       entries: paths.sources.mainJs,
       debug: !env.production
     })
+    // ES6 transpiling
+    .transform(to5)
     // Anotate angular di
     .transform({
       add: true,

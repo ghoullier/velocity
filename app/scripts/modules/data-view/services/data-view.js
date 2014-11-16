@@ -54,4 +54,4 @@ function DataViewServiceFactory($q) {
   };
 }
 
-module.exports = DataViewServiceFactory;
+export default DataViewServiceFactory;

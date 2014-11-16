@@ -12,4 +12,4 @@ function BikeStations(BikeStationsDataView, stations) {
   vm.stations = stations;
 }
 
-module.exports = BikeStations;
+export default BikeStations;

@@ -110,4 +110,4 @@ function CacheStorageProvider() {
   }
 }
 
-module.exports = CacheStorageProvider;
+export default CacheStorageProvider;

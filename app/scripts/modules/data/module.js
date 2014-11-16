@@ -1,15 +1,23 @@
 'use strict';
 
-module.exports = angular
+import CacheConfig from './config/cache';
+import OpenDataApi from './constant/api';
+import HttpCache from './services/http-cache';
+import ApiService from './services/api-service';
+import BikeDistrictsData from './services/bike-districts';
+import BikeStationsData from './services/bike-stations';
+import LinesData from './services/lines';
+
+export default angular
   .module('velocity.data', [
     'ngResource',
     'velocity.common'
   ])
-  .config(require('./config/cache'))
-  .constant('OpenDataApi', require('./constant/api'))
-  .factory('HttpCache', require('./services/http-cache'))
-  .factory('ApiService', require('./services/api-service'))
-  .factory('BikeDistrictsData', require('./services/bike-districts'))
-  .factory('BikeStationsData', require('./services/bike-stations'))
-  .factory('LinesData', require('./services/lines'))
+  .config(CacheConfig)
+  .constant('OpenDataApi', OpenDataApi)
+  .factory('HttpCache', HttpCache)
+  .factory('ApiService', ApiService)
+  .factory('BikeDistrictsData', BikeDistrictsData)
+  .factory('BikeStationsData', BikeStationsData)
+  .factory('LinesData', LinesData)
 ;

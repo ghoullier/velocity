@@ -7,4 +7,4 @@ function LinesViewDataFactory($q, DataView, LinesData) {
   return DataView(LinesData);
 }
 
-module.exports = LinesViewDataFactory;
+export default LinesViewDataFactory;

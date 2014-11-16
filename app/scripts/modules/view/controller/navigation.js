@@ -1,6 +1,6 @@
 'use strict';
 
-var routes = require('../config/routes');
+import routes from '../config/routes';
 
 /**
  * @ngInject
@@ -24,4 +24,4 @@ function Navigation() {
   ;
 }
 
-module.exports = Navigation;
+export default Navigation;

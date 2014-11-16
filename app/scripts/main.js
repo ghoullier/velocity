@@ -1,8 +1,8 @@
 'use strict';
 
 // Require application modules
-require('./modules/common/module');
-require('./modules/data/module');
-require('./modules/data-view/module');
-require('./modules/templates/module');
-require('./modules/view/module');
+import './modules/common/module';
+import './modules/data/module';
+import './modules/data-view/module';
+import './modules/templates/module';
+import './modules/view/module';

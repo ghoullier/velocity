@@ -3,6 +3,7 @@ var util = require('gulp-util');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var browserify = require('browserify');
+var to5 = require('6to5-browserify');
 var stream = require('vinyl-source-stream2');
 var env = require('./env');
 var paths = require('./paths');
@@ -14,6 +15,9 @@ module.exports = function() {
       insertGlobals: true,
       debug: !env.production
     })
+    // ES6 transpiling
+    .transform(to5)
+    // Bundle
     .bundle()
     // Catch errors
     .on('error', handlers.onBrowserifyError)

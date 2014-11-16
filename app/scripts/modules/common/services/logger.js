@@ -17,4 +17,4 @@ function Logger($log) {
   }
 }
 
-module.exports = Logger;
+export default Logger;

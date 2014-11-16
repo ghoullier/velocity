@@ -37,4 +37,4 @@ function ApiServiceFactory($http, HttpCache, OpenDataApi) {
   }
 }
 
-module.exports = ApiServiceFactory;
+export default ApiServiceFactory;

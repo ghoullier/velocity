@@ -47,4 +47,4 @@ function BikeStationDetail($routeParams, BikeStationsDataView, Geolocation) {
   }
 }
 
-module.exports = BikeStationDetail;
+export default BikeStationDetail;

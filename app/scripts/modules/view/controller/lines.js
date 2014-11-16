@@ -20,4 +20,4 @@ function Lines(LinesDataView) {
   });
 }
 
-module.exports = Lines;
+export default Lines;
