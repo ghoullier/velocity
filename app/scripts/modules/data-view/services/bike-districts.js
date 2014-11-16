@@ -3,7 +3,7 @@
 /**
  * @ngInject
  */
-function BikeDistrictsViewDataFactory($q, DataView, BikeDistrictsData) {
+function BikeDistrictsViewDataFactory(DataView, BikeDistrictsData) {
   return DataView(BikeDistrictsData);
 }
 

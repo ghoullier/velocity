@@ -7,7 +7,7 @@ function toInt(value) {
 /**
  * @ngInject
  */
-function BikeStationsDataViewFactory($q, DataView, BikeStationsData) {
+function BikeStationsDataViewFactory(DataView, BikeStationsData) {
 
   function getBikeStationsDataViewByResponse(response) {
     return response.data.opendata.answer.data.station;

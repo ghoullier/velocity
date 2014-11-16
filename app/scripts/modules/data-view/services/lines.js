@@ -3,7 +3,7 @@
 /**
  * @ngInject
  */
-function LinesViewDataFactory($q, DataView, LinesData) {
+function LinesViewDataFactory(DataView, LinesData) {
   return DataView(LinesData);
 }
 
