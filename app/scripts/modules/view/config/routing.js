@@ -11,7 +11,8 @@ function UiRouteConfig($routeProvider, $locationProvider) {
   routes.forEach(function onEachRoute(route) {
     $routeProvider.when(route.url, {
       templateUrl: route.templateUrl,
-      controller: route.controller
+      controller: route.controller,
+      resolve: route.resolve
     });
     if (route.otherwise) {
       $routeProvider.otherwise({

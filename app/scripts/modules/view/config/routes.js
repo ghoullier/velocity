@@ -11,7 +11,12 @@ module.exports = [{
   url: '/bike-stations',
   title: 'Liste des stations de vélos',
   templateUrl: 'views/bike-stations/list.html',
-  controller: 'BikeStations as vm'
+  controller: 'BikeStations as vm',
+  resolve: {
+    stations: /*@ngInject*/function(BikeStationsDataView) {
+      return BikeStationsDataView.get();
+    }
+  }
 },
 {
   url: '/bike-stations/:id',

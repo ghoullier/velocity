@@ -3,17 +3,13 @@
 /**
  * @ngInject
  */
-function BikeStations(BikeStationsDataView) {
+function BikeStations(BikeStationsDataView, stations) {
   // ViewModel
   var vm = this;
 
   // Interface
 
-  vm.stations = [];
-
-  BikeStationsDataView.get().then(function(stations) {
-    vm.stations = stations;
-  });
+  vm.stations = stations;
 }
 
 module.exports = BikeStations;
