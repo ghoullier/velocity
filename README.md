@@ -1,17 +1,7 @@
-# Velocity
+# velocity v0.0.0
 
-A simple web app to check VeloStar availability
+## Documentation
 
-Based on https://github.com/ghoullier/angular-devstack
+- [GETTING-STARTED](./GETTING-STARTED.md)
 
-
-## Installation
-
-```
-# Install gulp and bower as global dependency
-npm install gulp bower -g
-# Install devstack dependencies
-npm install
-# Start dev task
-npm start
-```
+> TODO: Documentation

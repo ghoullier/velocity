@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * @ngInject
- */
+* @ngInject
+*/
 function Logger($log) {
   // Interface
   var service = {

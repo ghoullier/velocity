@@ -1,5 +1,11 @@
-.DS_Store
-node_modules/*
-dist/*
-vendor/*
-.publish/*
+# Ignore specific plateforms files
+.DS_STORE
+
+# Ignore app generated files
+/node_modules/
+/npm-debug.log
+/dist/
+/vendor/
+
+# Ignore IDE files
+/.idea/
