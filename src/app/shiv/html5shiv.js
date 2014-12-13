@@ -319,4 +319,4 @@ window.html5 = html5;
 // shiv the document
 shivDocument(document);
 
-}(this, document));
+}(window, window.document));
