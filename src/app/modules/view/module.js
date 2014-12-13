@@ -10,8 +10,6 @@ import Lines from './controller/lines';
 export default angular
   .module('velocity.view', [
     'ngRoute',
-    'ngTouch',
-    'ui.map',
     'velocity.common',
     'velocity.data-view',
     'velocity.templates'
@@ -20,6 +18,5 @@ export default angular
   .controller('Navigation', Navigation)
   .controller('Welcome', Welcome)
   .controller('BikeStations', BikeStations)
-  .controller('BikeStationDetail', BikeStationDetail)
   .controller('Lines', Lines)
 ;

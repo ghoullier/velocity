@@ -10,7 +10,6 @@ import LinesData from './services/lines';
 
 export default angular
   .module('velocity.data', [
-  'ngResource',
   'velocity.common'
   ])
   .config(CacheConfig)
